@@ -1,0 +1,85 @@
+<!Doctype html>
+<html>
+ 
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+    </head>
+ 
+    <body>
+    <div class="article-content"></div>
+        <div class="article-content2"></div>
+        <div class="article-content3"></div>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+        <script type="text/javascript">
+            (function($) {
+                // 插件名称
+                var namespace='copyRight';
+                // 插件方法
+                var methods={
+                    init:function(options){
+                    options=$.extend({},$.fn[namespace].defaults,options);
+                for(one in options){// 遍历传的参数其中option代表所有传进来的参数
+                    if(one=='cpBy'){
+                        var cpTxt='版权归'+'<a target="_blank" href="'+options.url+'">'+options[one]+'</a>'+'所有'; 
+                       // 判断参数是否是cpBy 
+                       //是的话就显示出来
+                    }else{
+                        this.css(one,options[one]);//不是，给相应内容添加css样式
+                    }
+                        }
+                        this.append(cpTxt);
+                        return this;
+                    }
+                }
+            
+                // 采用命名空间来调用方法，可以通用
+                $.fn[namespace]=function(method){
+                    if(methods[method]){
+                        return methods[method].apply(this,Array.prototype.slice.call(arguments,1));
+                    }else if($.type(method)==='object'){
+                        return methods.init.apply(this,arguments);
+                    }else{
+                        $.error('Method'+method+'does not exit!')
+                    }
+                };
+                // 设置默认的配置项，并且采用全局变量方便我们修改值
+                $.fn[namespace].defaults={
+                cpBy:'慕课网',//版权所有者
+                url:'http://www.imooc.com',//链接
+                fontSize:'16px',
+                textAlign:'center',
+                width:'100%',
+                height:'50px',
+                lineHeight :'50px',
+                background :'green',
+                color:'yellow'
+            };
+            
+               
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+            $(function() { 
+                什么参数都不传，执行默认配置
+                $('.article-content').copyRight();
+ 
+                // //只传函数名,效果跟上面一样
+                // $('.article-content').copyRight('init'); 
+ 
+                // 传入方法名，并给予配置项
+                $('.article-content2').copyRight('init',{
+                    cpBy:'百度',
+                    url:'http://www.baidu.com',
+                    background:'red',
+                    
+                })
+                // 直接传入配置项，并且在配置项添加新属性
+                $('.article-content3').copyRight({
+                    
+                    border:'solid 1px black'
+                })
+            });
+        </script>
+    </body>
+</html> 
