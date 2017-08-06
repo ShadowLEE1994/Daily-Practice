@@ -1,0 +1,51 @@
+/*弹出层遮罩*/
+.layer-mask
+{	
+	display: none;
+	z-index: 10;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+/*弹出层窗体*/
+.layer-pop
+{	
+	display: none;
+	z-index: 11;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0; 
+	bottom: 0;
+	margin: auto;
+	width: 400px;
+	height: 300px;
+	background: #fff;
+}
+/*弹窗关闭按钮*/
+.layer-close
+{
+	float: right;
+	width: 24px;
+	height: 24px;
+	border: 3px solid #fff;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 50%;
+	background-color: #eee;
+	margin-right: -12px;
+	margin-top: -12px;
+}
+.layer-close:hover
+{
+	cursor: pointer;
+	background-color: #ccc;
+	color: #fff;
+}
+#Login{
+	color:red;
+	font-size: 40px;
+}

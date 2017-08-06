@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>弹出层制作</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<form><input type="button" name="login" value="登录" id="loginLink"></form>
+	<!-- 弹出层遮罩 -->
+	<div class="layer-mask" id="layer-mask"></div>
+	<!-- 弹出层窗体 -->
+	<div class="layer-pop" id="layer-pop">
+	<!-- 弹出层关闭按钮 -->
+		<div id="layer-close" class="layer-close">x</div>
+		<!-- 弹出层内容区域 -->
+		<div class="layer-condent" id="layer-content"></div>
+	</div>
+
+	<div id="loginHtml" style="display: none">
+	<div id="Login">
+	<label>密码</label>
+	<input type="password" name="password" class="input">
+	<br/>
+	<label>密码</label>
+	<input type="password" name="repassword" class="input">
+	<br/>
+	<input type="submit" name="submit" id="submit" value="填好了">
+	<p class="error-msg"></p>
+	</div>
+	</div>
+
+
+
+
+<script src="https://cdn.bootcss.com/jquery/1.2.6/jquery.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
