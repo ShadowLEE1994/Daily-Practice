@@ -1,1 +1,1 @@
-it's a musicplayer
+it's a music player
