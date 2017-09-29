@@ -20,8 +20,8 @@ export default {}
 .m-header
   width:100%
   height:80vh
-  background:url('../assets/images/bg_01.jpg') no-repeat !important
   position: relative
+  background-image url(../assets/images/bg_01.jpg)
   .textarea
     position : absolute
     top:50%
