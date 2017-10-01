@@ -20,13 +20,13 @@ export default {
     return {
       caselist: [
         {
-          src: require('../assets/images/case-1.jpg'),
+          src: require('../assets/images/case-2.jpg'),
           title: '8H官网',
           text: '8H科技睡眠床垫，智能家居行业独角兽。先后获得顺为资本、峰谷资本、京东、小米及羽泉等多轮融资。京东众筹610万人民币，以2000%的完成率创造小米第三方产品众筹神话',
           layout: 'left'
         },
         {
-          src: require('../assets/images/case-2.jpg'),
+          src: require('../assets/images/case-1.jpg'),
           title: '医诊网',
           text: '拇指营销是诺信推出的一款为企业营销提供快捷管理app。八戒软件帮助实现功能包括：自动同步药企通讯录，药企人员可无缝登录营销APP；通过科学与数据化的展示方式话',
           layout: 'right'
